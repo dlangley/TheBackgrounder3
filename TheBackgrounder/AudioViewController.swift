@@ -61,7 +61,7 @@ extension AudioViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "currentItem", let player = object as? AVPlayer,
             let currentItem = player.currentItem?.asset as? AVURLAsset {
-            songLabel.text = currentItem.url.lastPathComponent ?? "Unknown"
+            songLabel.text = currentItem.url.lastPathComponent 
         }
     }
 }

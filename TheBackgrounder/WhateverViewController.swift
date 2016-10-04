@@ -23,7 +23,7 @@ class WhateverViewController: UIViewController {
         sender.isSelected = !sender.isSelected
         if sender.isSelected {
             resetCalculation()
-            updateTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: Selector(("calculateNextNumber")), userInfo: nil, repeats: true)
+            updateTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(WhateverViewController.calculateNextNumber), userInfo: nil, repeats: true)
             registerBackgroundTask()
         } else {
             updateTimer?.invalidate()
